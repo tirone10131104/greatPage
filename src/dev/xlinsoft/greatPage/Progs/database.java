@@ -21,11 +21,13 @@ public class database
         int r = up.createConnection(dtype, "jdbc:mysql://" + sip + ":3306/", uname, upwd);
         if (r != dbReturn.CONNECTION_CREATE_SUCCESS)
         {
+            System.err.println("1");
             return null;
         }
         int i = up.useDB("great_paper");
         if (i != 5808)
         {
+            System.err.println("2");
             return null;
         }
         return up;
