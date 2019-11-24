@@ -1,7 +1,10 @@
 package dev.xlinsoft.greatPage.Entities;
 
 import dev.xlin.tols.data.annotations.JDBId;
+import dev.xlin.tols.data.annotations.JDBNoSave;
+import dev.xlin.tols.data.annotations.JDBNoUpdate;
 import dev.xlin.tols.data.annotations.JDBTable;
+import java.awt.geom.Rectangle2D;
 
 /**
  *
@@ -13,7 +16,7 @@ public class BeanPaperData
 
     @JDBId
     private int OID = 0;
-    private String dataChunk = ""; 
+    private String dataChunk = "";
     private int paperID = 0;
     private double x = 0;
     private double y = 0;
@@ -22,6 +25,10 @@ public class BeanPaperData
     private int dataType = 0;
     private int layerID = 0;
     private int styleID = 0;
+    private int orderId = 0;
+    @JDBNoSave
+    @JDBNoUpdate
+    private Rectangle2D.Double borderRect = null;
 
     public int getOID()
     {
@@ -41,7 +48,7 @@ public class BeanPaperData
     public void setDataChunk(String dataChunk)
     {
         this.dataChunk = dataChunk;
-    } 
+    }
 
     public int getPaperID()
     {
@@ -121,6 +128,26 @@ public class BeanPaperData
     public void setStyleID(int styleID)
     {
         this.styleID = styleID;
+    }
+
+    public Rectangle2D.Double getBorderRect()
+    {
+        return borderRect;
+    }
+
+    public void setBorderRect(Rectangle2D.Double borderRect)
+    {
+        this.borderRect = borderRect;
+    }
+
+    public int getOrderId()
+    {
+        return orderId;
+    }
+
+    public void setOrderId(int orderId)
+    {
+        this.orderId = orderId;
     }
 
 }

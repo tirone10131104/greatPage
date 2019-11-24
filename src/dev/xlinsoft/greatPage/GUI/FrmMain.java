@@ -3,6 +3,7 @@ package dev.xlinsoft.greatPage.GUI;
 import dev.xlin.tols.data.wakeup;
 import dev.xlinsoft.greatPage.GUI.IFrms.IFrmPaperEditor;
 import dev.xlinsoft.greatPage.Progs.database;
+import javax.swing.JFrame;
 
 /**
  *
@@ -16,14 +17,15 @@ public class FrmMain extends javax.swing.JFrame
     public FrmMain()
     {
         initComponents();
-        up = database.connectRemoteDB__39(); 
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
+        up = database.connectRemoteDB__39();
         testOpenPED();
     }
 
     private void testOpenPED()
     {
         IFrmPaperEditor ifPED = new IFrmPaperEditor(up, 0);
-        desktop.add(ifPED); 
+        desktop.add(ifPED);
         ifPED.setVisible(true);
     }
 
