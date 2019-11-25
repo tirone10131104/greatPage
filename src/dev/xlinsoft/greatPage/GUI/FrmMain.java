@@ -18,7 +18,7 @@ public class FrmMain extends javax.swing.JFrame
     {
         initComponents();
         setExtendedState(JFrame.MAXIMIZED_BOTH);
-        up = database.connectRemoteDB__39();
+        up = database.connectRemoteDB__120();
         testOpenPED();
     }
 
