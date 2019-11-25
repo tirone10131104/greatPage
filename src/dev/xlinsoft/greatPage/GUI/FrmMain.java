@@ -2,7 +2,7 @@ package dev.xlinsoft.greatPage.GUI;
 
 import dev.xlin.tols.data.wakeup;
 import dev.xlinsoft.greatPage.GUI.IFrms.IFrmPaperEditor;
-import dev.xlinsoft.greatPage.Progs.database;
+import dev.xlinsoft.greatPage.Progs.dataconn;
 import javax.swing.JFrame;
 
 /**
@@ -18,7 +18,7 @@ public class FrmMain extends javax.swing.JFrame
     {
         initComponents();
         setExtendedState(JFrame.MAXIMIZED_BOTH);
-        up = database.connectRemoteDB__120();
+        up = dataconn.connectRemoteDB__120();
         testOpenPED();
     }
 
